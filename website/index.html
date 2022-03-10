@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <script  type="module" src="./resources/index.js"></script>
+    <title>WWERFUEL-2022</title>
+  </head>
+  <body>
+    <h1>XIV INTERNATIONAL CONFERENCE ON WWER FUEL PERFORMANCE, MODELLING AND
+      EXPERIMENTAL SUPPORT</h1>
+
+      <form id="form">
+        <div class="field">
+          <label for="title">Title</label>
+          <select name="title" id="title">
+            <option value="Prof.">Prof.</option>
+            <option value="assos. prof.">assos. prof.</option>
+            <option value="Dr.">Dr.</option>
+            <option value="Mr.">Mr.</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="first_name">First Name</label>
+          <input type="text" name="first_name" id="first_name">
+        </div>
+        <div class="field">
+          <label for="surname">Surname</label>
+          <input type="text" name="surname" id="surname">
+        </div>
+        <div class="field">
+          <label for="message">Comment</label>
+          <input type="text" name="message" id="message">
+        </div>
+        <div class="field">
+          <label for="from_mail">From Mail</label>
+          <input type="text" name="from_mail" id="from_mail">
+        </div>
+
+        <div class="section-container">
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th colspan="2" class="th_text">
+                <div class="checkbox grey_box">
+                  <label for="visa-label">
+                    <input type="checkbox" id="visaid" onclick="return checkboxValueVisa()">
+                      I will need a single entry visa to Bulgaria
+                  </label>
+                </div>
+              </th>
+            </tr>
+          </thead>
+        		<tbody id="visa-table">
+        			<tr>
+        				<td>Full name as indicated in your passport *</td>
+        				<td colspan="3">
+        					<div class="form-group col-12">
+        						<input type="text" class="visa" name="passportFullName">
+        						<label for="input" class="control-label"></label><i class="bar"></i>
+        					</div>
+        				</td>
+        			</tr>
+        			<tr>
+        				<td>Place of Residence *</td>
+        				<td colspan="3">
+        					<div class="form-group col-12">
+        						<input type="text" class="visa" name="placeOfResidence">
+        						<label for="input" class="control-label"></label><i class="bar"></i>
+        					</div>
+        				</td>
+        			</tr>
+        			<tr>
+        				<td>Passport no *</td>
+        				<td colspan="3">
+        					<div class="form-group col-12">
+        						<input type="text" class="visa" name="passportNo" >
+        						<label for="input" class="control-label"></label><i class="bar"></i>
+        					</div>
+        				</td>
+        			</tr>
+        			<tr>
+        				<td>Issued Place *</td>
+        				<td colspan="3">
+        					<div class="form-group col-12">
+        						<input type="text" class="visa" name="issuedPlace">
+        						<label for="input" class="control-label"></label><i class="bar"></i>
+        					</div>
+        				</td>
+        			</tr>
+        			<tr>
+        				<td>Date Issued *</td>
+        				<td>
+        					<div class="form-group col-12">
+        						<input type="date" class="visa datepicker_visa hasDatepicker" name="dateIssued" id="dp1646470312340">
+        						<label for="dateIssuedLabel" class="control-label"></label><i class="bar"></i>
+        					</div>
+        				</td>
+        				<td>Date Expiry *</td>
+        				<td>
+        					<div class="form-group col-12">
+        						<input type="date" class="visa datepicker_visa hasDatepicker" name="dateExpiry" id="dp1646470312341" >
+        						<label for="dateExpiryLabel" class="control-label"></label><i class="bar"></i>
+        					</div>
+        				</td>
+        			</tr>
+        		</tbody>
+        	</table>
+        </div>
+        <div class="section-sign">
+          <h2>CONFERENCE PACKAGES</h2>
+        </div>
+
+        <table>
+          <tbody id="packages-table">
+            <tr>
+              <td>Registration type and deadlines</td>
+              <td>Eearly Bird - until 15 June</td>
+              <td>Late - from 16 June until 31 August</td>
+              <td>On spot</td>
+            </tr>
+            <tr>
+              <td>Single accommodation</td>
+              <td>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="vatParticipation" id="price-670" value="670"><i class="helper"></i>670 Euro
+                  </label>
+                </div>
+              </td>
+              <td>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="vatParticipation" id="price-820" value="820"><i class="helper"></i>820 Euro
+                  </label>
+                </div>
+              </td>
+              <td>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="vatParticipation" id="price-770" value="870"><i class="helper"></i>870 Euro
+                  </label>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Double accommodation</td>
+              <td>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="vatParticipation" id="price-570" value="570"><i class="helper"></i>570 Euro
+                  </label>
+                </div>
+              </td>
+              <td>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="vatParticipation" id="price-720" value="720"><i class="helper"></i>720 Euro
+                  </label>
+                </div>
+              </td>
+              <td>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="vatParticipation" id="price-770" value="770"><i class="helper"></i>770 Euro
+                  </label>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <script type="module" src="./resources/index.js">
+          selectPackageF();
+        </script>
+
+        <div class="field">
+          <label for="arrival-date"> Date of arrival
+            <input type="date" min="2022-09-13" max="2022-09-23" value="2022-09-14" name="arrival-data" placeholder="select arrival date" id="arrival-date-id"  onchange="return calculateNumberOfNights()">
+          </label>
+        </div>
+
+        <div class="field">
+          <label for="departure-date"> Date of departure
+            <input type="date" min="2022-09-13" max="2022-09-23" value="2022-09-21" name="departure-data" placeholder="select departure date" id="departure-date-id"  	onchange="return calculateNumberOfNights()">
+          </label>
+        </div>
+
+        <div class="field">
+          <label for="number-of-nights">Number of nights</label>
+          <input type="text" name="numberOfNights" value="" id="number-of-nights-id"/>
+          <script type="module" src="./resources/index.js">
+            calculateNumberOfNights();
+          </script>
+        </div>
+
+        <p id="accomodation-amount">Registration / accommodation amount:</p>
+        <div class="section-container">
+            <table class="table">
+            	<thead>
+            		<tr>
+            			<th colspan="2" class="th_text">
+            				<div class="checkbox grey_box">
+            					<label for="invoice">
+            						<input type="checkbox" id="invoiceParticipation" onclick="checkboxValueInvoice()">
+                          I would like to receive an invoice
+            					</label>
+            				</div>
+            			</th>
+            		</tr>
+            	</thead>
+            	<tbody class="single_invoice_tbody" id="invoice-table">
+            		<tr>
+                  <td>Company/Organization Name</td>
+            			<td>
+            				<div class="form-group col-12">
+            					<input type="text" name="companyParticipation" placeholder="Company/Organization Name">
+            					<label for="Company/Organization Name" class="control-label"></label><i class="bar"></i>
+            				</div>
+            			</td>
+            		</tr>
+            		<tr>
+            			<td>VAT number</td>
+            			<td>
+            				<div class="form-group col-12">
+            					<input type="text" name="vat" placeholder="VAT number">
+            					<label for="VAT" class="control-label"></label><i class="bar"></i>
+            				</div>
+            			</td>
+            		</tr>
+            		<tr>
+
+            		</tr>
+            		<tr>
+            			<td>Accountable person	</td>
+            			<td>
+            				<div class="form-group col-12">
+            					<input type="text" name="accountablePerson" placeholder="Accountable person">
+            					<label for="Name" class="control-label"></label><i class="bar"></i>
+            				</div>
+            			</td>
+            		</tr>
+            		<tr>
+            			<td>Tax address</td>
+            			<td>
+            				<div class="form-group col-12">
+            					<input type="text" name="taxAddressParticipation" placeholder="Tax address">
+            					<label for="address" class="control-label"></label><i class="bar"></i>
+            				</div>
+            			</td>
+            		</tr>
+            		<tr>
+            			<td>E-mail for e-Invoicing	</td>
+            			<td>
+            				<div class="form-group col-12">
+            					<input type="text" name="invoiceEmailParticipation" placeholder="E-mail for e-Invoicing">
+            					<label for="email-invoice" class="control-label"></label><i class="bar"></i>
+            				</div>
+            			</td>
+            		</tr>
+            	</tbody>
+            </table>
+            </div>
+
+        <input type="submit" id="button" value="Send Email">
+
+      </form>
+
+      <script type="text/javascript"
+              src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+      </script>
+      <script type="text/javascript">
+
+      </script>
+  </body>
+</html>
