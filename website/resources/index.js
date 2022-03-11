@@ -3,10 +3,18 @@ import {templateID} from './mailjs.js';
 import {mailjsToken} from './mailjs.js';
 
 document.getElementById("button").addEventListener('click', clickButton);
+document.getElementById("invoiceParticipation").addEventListener('click', checkboxValueInvoice);
+document.getElementById("arrival-date-id").addEventListener('change', calculateNumberOfNights);
+document.getElementById('departure-date-id').addEventListener('change', calculateNumberOfNights);
+document.getElementById('visaid').addEventListener('click', checkboxValueVisa);
+
+let numberOfNights = document.getElementById("number-of-nights-id");
+document.getElementById('number-of-nights-id').setAttribute('value', "6")
 
 function clickButton(e) {
 
     const btn = document.getElementById('button');
+    const first_name = document.getElementById('first_name');
 
     document.getElementById('form')
 
@@ -15,6 +23,9 @@ function clickButton(e) {
     event.preventDefault();
 
     btn.value = 'Sending...';
+    if(first_name.value == '') {
+      alert('First name is empty')
+    }
 
     emailjs.sendForm(serviceID, templateID, '#form', mailjsToken)
         .then(() => {
@@ -74,7 +85,7 @@ function showSelected(e) {
 }
 
 function accomodationAmount() {
-  element = document.getElementById("accomodation-amount");
+  let element = document.getElementById("accomodation-amount");
   element.innerHTML = "Registration / accommodation amount: " + parseInt(selectPackage) + " Euro";
 }
 

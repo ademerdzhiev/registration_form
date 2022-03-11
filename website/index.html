@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
-    <script  type="module" src="./resources/index.js"></script>
     <title>WWERFUEL-2022</title>
   </head>
   <body>
@@ -45,7 +44,7 @@
               <th colspan="2" class="th_text">
                 <div class="checkbox grey_box">
                   <label for="visa-label">
-                    <input type="checkbox" id="visaid" onclick="return checkboxValueVisa()">
+                    <input type="checkbox" id="visaid">
                       I will need a single entry visa to Bulgaria
                   </label>
                 </div>
@@ -171,28 +170,21 @@
           </tbody>
         </table>
 
-        <script type="module" src="./resources/index.js">
-          selectPackageF();
-        </script>
-
         <div class="field">
           <label for="arrival-date"> Date of arrival
-            <input type="date" min="2022-09-13" max="2022-09-23" value="2022-09-14" name="arrival-data" placeholder="select arrival date" id="arrival-date-id"  onchange="return calculateNumberOfNights()">
+            <input type="date" min="2022-09-13" max="2022-09-23" value="2022-09-15" name="arrival-data" placeholder="select arrival date" id="arrival-date-id">
           </label>
         </div>
 
         <div class="field">
           <label for="departure-date"> Date of departure
-            <input type="date" min="2022-09-13" max="2022-09-23" value="2022-09-21" name="departure-data" placeholder="select departure date" id="departure-date-id"  	onchange="return calculateNumberOfNights()">
+            <input type="date" min="2022-09-13" max="2022-09-23" value="2022-09-21" name="departure-data" placeholder="select departure date" id="departure-date-id" >
           </label>
         </div>
 
         <div class="field">
           <label for="number-of-nights">Number of nights</label>
-          <input type="text" name="numberOfNights" value="" id="number-of-nights-id"/>
-          <script type="module" src="./resources/index.js">
-            calculateNumberOfNights();
-          </script>
+          <input type="text" name="numberOfNights" value="" id="number-of-nights-id" disabled value="6">
         </div>
 
         <p id="accomodation-amount">Registration / accommodation amount:</p>
@@ -203,7 +195,7 @@
             			<th colspan="2" class="th_text">
             				<div class="checkbox grey_box">
             					<label for="invoice">
-            						<input type="checkbox" id="invoiceParticipation" onclick="checkboxValueInvoice()">
+            						<input type="checkbox" id="invoiceParticipation">
                           I would like to receive an invoice
             					</label>
             				</div>
@@ -267,11 +259,11 @@
 
       </form>
 
+      <script  type="module" src="./resources/index.js"></script>
+
       <script type="text/javascript"
               src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
       </script>
-      <script type="text/javascript">
 
-      </script>
   </body>
 </html>
