@@ -8,6 +8,8 @@ document.getElementById("arrival-date-id").addEventListener('change', calculateN
 document.getElementById('departure-date-id').addEventListener('change', calculateNumberOfNights);
 document.getElementById('visaid').addEventListener('click', checkboxValueVisa);
 
+selectPackageF()
+
 let numberOfNights = document.getElementById("number-of-nights-id");
 document.getElementById('number-of-nights-id').setAttribute('value', "6")
 
