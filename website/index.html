@@ -8,32 +8,56 @@
   <body>
     <h1>XIV INTERNATIONAL CONFERENCE ON WWER FUEL PERFORMANCE, MODELLING AND
       EXPERIMENTAL SUPPORT</h1>
-<!-- TEST GALINA -->
       <form id="form">
         <div class="field">
           <label for="title">Title</label>
           <select name="title" id="title">
+            <option value=""></option>
             <option value="Prof.">Prof.</option>
-            <option value="assos. prof.">assos. prof.</option>
+            <option value="Assoc. Prof.">Assos. Prof.</option>
             <option value="Dr.">Dr.</option>
             <option value="Mr.">Mr.</option>
+            <option value="Mrs.">Mrs.</option>
+            <option value="Miss">Miss</option>
           </select>
         </div>
         <div class="field">
-          <label for="first_name">First Name</label>
-          <input type="text" name="first_name" id="first_name">
+          <label for="first_name">First Name *</label>
+          <input type="text" name="first_name" id="first_name" required>
         </div>
         <div class="field">
-          <label for="surname">Surname</label>
-          <input type="text" name="surname" id="surname">
+          <label for="surname">Surname *</label>
+          <input type="text" name="surname" id="surname" required>
         </div>
+
+        <div class="field">
+          <label for="institute">Institute/Organization</label>
+          <input type="text" name="institute" id="institute">
+        </div>
+
+        <div class="field">
+          <label for="city">City</label>
+          <input type="text" name="city" id="city">
+        </div>
+
+        <div class="field">
+          <label for="inst-address">Address</label>
+          <input type="text" name="inst-address" id="inst-address">
+        </div>
+
+        <div class="field">
+          <label for="country">Country</label>
+          <input type="text" name="country" id="country">
+        </div>
+
+        <div class="field">
+          <label for="from_mail">E-mail *</label>
+          <input type="text" name="from_mail" id="from_mail" required>
+        </div>
+
         <div class="field">
           <label for="message">Comment</label>
           <input type="text" name="message" id="message">
-        </div>
-        <div class="field">
-          <label for="from_mail">From Mail</label>
-          <input type="text" name="from_mail" id="from_mail">
         </div>
 
         <div class="section-container">
@@ -204,19 +228,19 @@
             	</thead>
             	<tbody class="single_invoice_tbody" id="invoice-table">
             		<tr>
-                  <td>Company/Organization Name</td>
+                  <td>Company/Organization Name *</td>
             			<td>
             				<div class="form-group col-12">
-            					<input type="text" name="companyParticipation" placeholder="Company/Organization Name">
+            					<input type="text" name="companyParticipation" id="institution-name" placeholder="Company/Organization Name">
             					<label for="Company/Organization Name" class="control-label"></label><i class="bar"></i>
             				</div>
             			</td>
             		</tr>
             		<tr>
-            			<td>VAT number</td>
+            			<td>VAT number *</td>
             			<td>
             				<div class="form-group col-12">
-            					<input type="text" name="vat" placeholder="VAT number">
+            					<input type="text" name="vat" id='vat-number' placeholder="VAT number *">
             					<label for="VAT" class="control-label"></label><i class="bar"></i>
             				</div>
             			</td>
@@ -225,28 +249,28 @@
 
             		</tr>
             		<tr>
-            			<td>Accountable person	</td>
+            			<td>Accountable person	*</td>
             			<td>
             				<div class="form-group col-12">
-            					<input type="text" name="accountablePerson" placeholder="Accountable person">
+            					<input type="text" name="accountablePerson"  id='accountable-person' placeholder="Accountable person">
             					<label for="Name" class="control-label"></label><i class="bar"></i>
             				</div>
             			</td>
             		</tr>
             		<tr>
-            			<td>Tax address</td>
+            			<td>Tax address *</td>
             			<td>
             				<div class="form-group col-12">
-            					<input type="text" name="taxAddressParticipation" placeholder="Tax address">
+            					<input type="text" name="taxAddressParticipation" id='vat-address' placeholder="Tax address">
             					<label for="address" class="control-label"></label><i class="bar"></i>
             				</div>
             			</td>
             		</tr>
             		<tr>
-            			<td>E-mail for e-Invoicing	</td>
+            			<td>E-mail for e-Invoicing	*</td>
             			<td>
             				<div class="form-group col-12">
-            					<input type="text" name="invoiceEmailParticipation" placeholder="E-mail for e-Invoicing">
+            					<input type="text" name="invoiceEmailParticipation" id='vat-email' placeholder="E-mail for e-Invoicing">
             					<label for="email-invoice" class="control-label"></label><i class="bar"></i>
             				</div>
             			</td>
